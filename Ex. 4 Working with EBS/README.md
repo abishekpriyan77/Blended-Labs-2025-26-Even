@@ -2,9 +2,9 @@
 
 ## Author
 
-* **Name**: ________________________________
-* **Register Number**: _____________________
-* **Date of Submission**: __________________
+* **Name**: ABISHEIK PRIYAN V
+* **Register Number**: 212224230005
+
 
 ---
 
@@ -76,15 +76,18 @@ Reboot the EC2 instance and verify that the data stored in the EBS volume is sti
 
 ---
 
-## Workflow (Student Explanation)
+## Workflow 
 
-(Write the steps you followed in your own words)
+1.Create a 1 GiB EBS volume in the same Availability Zone as the EC2 (Lab) instance and name it “My Volume”.
 
-1. ---
-2. ---
-3. ---
-4. ---
-5. ---
+2.Attach “My Volume” to the EC2 instance using device name /dev/sdb.
+
+3.Connect to the instance via Session Manager, create /mnt/data-store, format /dev/sdb (ext3), mount it, and update /etc/fstab.
+
+4.Write a file to the mounted volume and create a snapshot named “My Snapshot” from the EBS volume.
+
+5.Restore the snapshot as a new volume, attach it to the instance, mount it (e.g., /dev/sdc), and verify the file.
+
 
 ---
 
@@ -92,19 +95,36 @@ Reboot the EC2 instance and verify that the data stored in the EBS volume is sti
 
 ### Screenshot 1: EBS Volume Created
 
-(Insert Screenshot Here)
+<img width="1920" height="948" alt="image" src="https://github.com/user-attachments/assets/a3822d79-60fc-4c32-a113-b418f7a6e3ec" />
+
+<img width="1920" height="950" alt="image" src="https://github.com/user-attachments/assets/80efda4f-7543-4d32-a55c-7b5600254b50" />
+
+
 
 ---
 
 ### Screenshot 2: EBS Volume Attached to EC2
 
-(Insert Screenshot Here)
+<img width="1920" height="956" alt="image" src="https://github.com/user-attachments/assets/e1686907-0c42-42bf-b301-5549f33b4c8b" />
+
+<img width="1920" height="955" alt="image" src="https://github.com/user-attachments/assets/489d321e-4f49-43c7-a27e-951cf2aadb87" />
+
+<img width="1920" height="953" alt="image" src="https://github.com/user-attachments/assets/8570378d-0179-470d-96ae-ca8546f3e691" />
+
+<img width="1920" height="949" alt="image" src="https://github.com/user-attachments/assets/b6f9d536-7060-4f90-a4a2-3a358d5f81af" />
+
 
 ---
 
 ### Screenshot 3: Mounted Volume with Data
 
-(Insert Screenshot Here)
+<img width="1920" height="959" alt="image" src="https://github.com/user-attachments/assets/43f244ae-e775-4a54-b8ee-98f9a2c7eb89" />
+
+<img width="1920" height="952" alt="image" src="https://github.com/user-attachments/assets/523c0381-6466-4bfd-8680-4046411eebc6" />
+
+<img width="1920" height="944" alt="image" src="https://github.com/user-attachments/assets/da268936-7703-467d-a1e0-6737c0416868" />
+
+<img width="1920" height="952" alt="image" src="https://github.com/user-attachments/assets/392711b1-4250-467e-bd35-1b9474c3599f" />
 
 ---
 
